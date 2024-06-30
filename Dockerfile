@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
 
-COPY ..
+COPY . .
 EXPOSE 5000
 ENV NAME World
 CMD ["python","app.py"]
